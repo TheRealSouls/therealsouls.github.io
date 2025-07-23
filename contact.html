@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="contact.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/d24d18c78a.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <title>matas roda</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+window.onload = () => {
+
+  /* Typewriter animation */
+  let text = "hi, i'm matas roda.";
+
+  if (window.location.href.includes("contact")) {
+    text = "contact me here.";
+  }
+
+  const speed = 100;
+  const pause = 2500;
+  const eraseSpeed = 50;
+
+  const textSpan = document.querySelector(".typewriter");
+  let i = 0;
+  let isDeleting = false;
+
+  const typeWriter = () => {
+    if (!textSpan) return;
+
+    if (!isDeleting) {
+      textSpan.textContent += text.charAt(i);
+      i++;
+      if (i < text.length) {
+        setTimeout(typeWriter, speed);
+      } else {
+        setTimeout(() => {
+          isDeleting = true;
+          typeWriter();
+        }, pause);
+      }
+    } else {
+      textSpan.textContent = text.substring(0, i - 1);
+      i--;
+      if (i > 0) {
+        setTimeout(typeWriter, eraseSpeed);
+      } else {
+        isDeleting = false;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  };
+
+  typeWriter();
+};
+</script>
+
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">matas roda</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            projects
+                            </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="https://statistics-calculator.surge.sh/">Statistics Calculator</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://todo-list-task-app.surge.sh/">To-do List</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Chess Game</a>
+                            </li>
+                        </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="about">
+            <h1><span class="typewriter"></span></h1>
+            <p class="desc">if you ever want a quick chat, have a proposition or want to grab a coffee <span class="brackets">(a virtual one)</span>, you can contact me through any method below:</p>
+            <div id="socials">
+                <a href="https://www.linkedin.com/in/matas-roda-981421357/" aria-label="Go to LinkedIn"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/TheRealSouls" aria-label="Go to GitHub"><i class="fa-brands fa-github fa-2x"></i></a>
+            </div>
+            <div class="form-wrapper">
+                <form
+            action="https://formspree.io/f/mjkokqqz"
+            method="POST" id="contact-form">
+
+            <input type="name" name="name" placeholder="name" autocomplete="off" required>
+            <input type="email" name="email" placeholder="email" autocomplete="off" required>
+            <textarea name="message" placeholder="message" rows="10" cols="50" autocomplete="off" required></textarea>
+            <button type="submit">send message</button>
+            </form>
+            </div>
+        </div>
+        <footer>
+            <p>developed with ❤️ by TheRealSouls (me) | <a href="https://github.com/TheRealSouls" aria-label="go to github"><i class="fa-brands fa-github fa-2x"></i></a></p>
+        </footer>
+
+    </body>
+</html>
