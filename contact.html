@@ -10,53 +10,6 @@
         <title>matas roda</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-window.onload = () => {
-
-  /* Typewriter animation */
-  let text = "hi, i'm matas roda.";
-
-  if (window.location.href.includes("contact")) {
-    text = "contact me here.";
-  }
-
-  const speed = 100;
-  const pause = 2500;
-  const eraseSpeed = 50;
-
-  const textSpan = document.querySelector(".typewriter");
-  let i = 0;
-  let isDeleting = false;
-
-  const typeWriter = () => {
-    if (!textSpan) return;
-
-    if (!isDeleting) {
-      textSpan.textContent += text.charAt(i);
-      i++;
-      if (i < text.length) {
-        setTimeout(typeWriter, speed);
-      } else {
-        setTimeout(() => {
-          isDeleting = true;
-          typeWriter();
-        }, pause);
-      }
-    } else {
-      textSpan.textContent = text.substring(0, i - 1);
-      i--;
-      if (i > 0) {
-        setTimeout(typeWriter, eraseSpeed);
-      } else {
-        isDeleting = false;
-        setTimeout(typeWriter, speed);
-      }
-    }
-  };
-
-  typeWriter();
-};
-</script>
 
     </head>
     <body>
@@ -124,4 +77,5 @@ window.onload = () => {
         </footer>
 
     </body>
+    <script src="script.js"></script>
 </html>
