@@ -44,7 +44,7 @@ window.onload = () => {
         setTimeout(typeWriter, eraseSpeed);
       } else {
         isDeleting = false;
-        setTimeout(typesWriter, speed);
+        setTimeout(typeWriter, speed);
       }
     }
   };
@@ -71,7 +71,7 @@ const projectsDiv = document.getElementById("projects");
     {
       icon: '<i class="fa-solid fa-circle-check fa-3x"></i>',
       title: "To-Do List",
-      desc: "Uses JavaScript's localStorage API to save your tasks when you refresh the website. Functional and has dark mode. <span class=\"brackets\">(so your eyes don't burn)</span>",
+      desc: `Uses JavaScript's localStorage API to save your tasks when you refresh the website. Functional and has dark mode. <span class=\"brackets\">(so your eyes don't burn!)</span>`,
       tags: [
         '<span class="tag html">HTML</span>',
         '<span class="tag css">CSS</span>',
