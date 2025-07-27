@@ -1,4 +1,4 @@
-![Alt text](https://i.ibb.co/ymF46CCx/Screenshot-2025-07-23-075933.png)
+![Alt text](https://i.ibb.co/d4nc72FL/Screenshot-2025-07-27-095144.png)
 
 <h1><a href="https://statistics-calculator.surge.sh/" style="font-size: 5rem;">view live</a></h1>
 
