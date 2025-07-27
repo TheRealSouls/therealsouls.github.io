@@ -79,6 +79,19 @@ const projectsDiv = document.getElementById("projects");
       ],
       src: "https://github.com/TheRealSouls/statistics_calculator",
       live: "https://todo-list-task-app.surge.sh/"
+    },
+    {
+      icon: '<i class="fa-solid fa-briefcase fa-3x"></i>',
+      title: "Portfolio website",
+      desc: `The website you are currently on! Uses Bootstrap and Masonry.js frameworks to compile an aesthetic website.`,
+      tags: [
+        '<span class="tag html">HTML</span>',
+        '<span class="tag css">CSS</span>',
+        '<span class="tag js">JavaScript</span>',
+        '<span class="tag bootstrap">Bootstrap</span>'
+      ],
+      src: "https://github.com/TheRealSouls/therealsouls.github.io",
+      live: "https://therealsouls.github.io/"
     }
   ];
 
