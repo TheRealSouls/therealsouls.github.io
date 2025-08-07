@@ -3,7 +3,7 @@ window.onload = () => {
     const grid = document.getElementById("photo-gallery");
     if (grid) {
         new Masonry(grid, {
-            itemSelector: 'img',
+            itemSelector: '.grid-item',
             fitWidth: true
         })
     }
