@@ -1,11 +1,13 @@
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     const grid = document.getElementById("photo-gallery");
     if (grid) {
+      imagesLoaded(grid, () => {
         new Masonry(grid, {
             itemSelector: '.grid-item',
             fitWidth: true
-        })
+        });
+      });
     }
 
   /* Typewriter animation */
@@ -50,7 +52,8 @@ window.onload = () => {
   };
 
   typeWriter();
-};
+
+});
 
 const projectsDiv = document.getElementById("projects");
   const dropdown = document.querySelector(".dropdown-menu");
@@ -116,4 +119,4 @@ const projectsDiv = document.getElementById("projects");
         <a class="dropdown-item" href="${project.live}">${project.title}</a>
       </li>
     `).join('');
-  }
+    };
